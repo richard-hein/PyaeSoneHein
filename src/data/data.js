@@ -20,12 +20,12 @@ const myEducationData = [
 ];
 
 const myDeveloperData = [
-  {
-    title: "Myanmar Web Developer Series",
-    subtitle: "Msquare Programming Youtube Channel",
-    date: "2021-2021",
-    description: "Starting Learing The Fundamenals Of Web Development",
-  },
+  // {
+  //   title: "Myanmar Web Developer Series",
+  //   subtitle: "Msquare Programming Youtube Channel",
+  //   date: "2021-2021",
+  //   description: "Starting Learing The Fundamenals Of Web Development",
+  // },
   {
     title: "A-Z Web Developer Bootcamp",
     subtitle: "CodeLab",
@@ -33,7 +33,13 @@ const myDeveloperData = [
     description: "I spend a lot of time at this by learning from HTML To PHP, Laravel And VueJs",
   },
   {
-    title: "NodeJs|React|Others.....",
+    title: "CodeLab OJT PHP/Laravel Program",
+    subtitle: "CodeLab",
+    date: "2022-2023",
+    description: "After AZ Web Developer Bootcamp, I've got a chance to join OJT program to gain real-world experience using PHP/Laravel and VueJs",
+  },
+  {
+    title: "MERNStack|IBM Programm Courses|Others.....",
     subtitle: "Coursera,Udemy,YouTube,",
     date: "2022-present",
     description: "I've built hands-on skills by working through tutorials on platforms like [e.g.Coursera, Udemy, YouTube] ",

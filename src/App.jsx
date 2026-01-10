@@ -5,7 +5,7 @@ import MySkills from "./sections/MySkills"
 import MyProjects from "./sections/MyProjects"
 import Footer from "./sections/Footer"
 import Header from "./sections/Header"
-import  Certificates  from "./sections/Certificates"
+import MyCertificates from "./sections/MyCertificates"
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
      <Hero/>{/* <div className="divider divider-primary"></div> */}
      <AboutMe />
      <MyJourney/>
+     {/* <MyCertificates/> */}
      <MySkills/>
      <MyProjects/>
      {/* <Certificates/> */}
