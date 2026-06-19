@@ -1,68 +1,83 @@
 import Project from "../components/Project";
+import { useTranslate } from "../hooks/useTranslate";
+
 const MyProjects = () => {
+  const t = useTranslate();
   return (
-    <section id="works" className="max-w-[1000px] mx-auto mt-[5rem]">
-      <h1 className="underline underline-offset-6 decoration-2 decoration-primary font-bold text-[1.5rem]  text-center mb-[1.5rem] md:mb-[1.8rem]">
-        What I've Built
-      </h1>
-      <p className="text-justify md:text-lg indent-6 md:text-indent-8 mb-[1.8rem] px-2">
-        Here are some of my web applications I've built. Each project reflects
-        my learning journey, problem-solving approach, and attention to user
-        experience.
-      </p>
+    <section id="projects" className=" mt-24 ">
+      {/* Section Header */}
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-bold mb-4">
+          <span className="border-b-4 border-primary pb-2 ">
+            {t("section_featured_projects")}
+          </span>
+        </h2>
 
-    {
+        <p className="max-w-[700px] mt-8 md:mt-6 mx-auto text-gray-400 leading-relaxed">
+          {t("featured_projects_subs")}
+        </p>
+      </div>
 
-    }
-     <Project
-        image="/images/proav_pos.png"
-        title="ProAV Shop "
-        description="Eccomerce- Product Selling Website building with React, Redux,Express and Mongo "
-        url="https://github.com/Richard-Hein/ProAV"
-        demo="https://proav.onrender.com/"
-          
-      />
+      {/* Projects */}
+
       <Project
-        image="/images/e-plant.png"
-        title="Welcome To Paradise Nursery "
-        description="Shopping Cart System built with React, Redux "
-        url="https://github.com/Richard-Hein/E-Plant"
-        demo="https://e-plant-three.vercel.app/"
-          
+        image="/images/yourfigs.png"
+        title="yourFigs - Anime Figure Shop"
+        description={t("featured_project_1")}
+        techStack={[
+          "Next.js",
+          "TypeScript",
+          "NextAuth",
+          "Prisma",
+          "Neon",
+          "Paypal",
+        ]}
+        url="https://github.com/richard-hein/ProStore"
+        demo="https://pro-store-pied-zeta.vercel.app/"
       />
+
       <Project
         image="/images/deezer.png"
         title="Deezer Clone"
-        description="Deezer Clone Website built with Vue3 and Pinia for state management"
+        description={t("featured_project_2")}
+        techStack={["Vue 3", "Pinia", "JavaScript"]}
         url="https://github.com/Richard-Hein/Deezer-Clone"
         demo="https://deezer-clone-indol.vercel.app/"
       />
-      
-       
       <Project
         image="/images/natrous.png"
-        title="Natrous Travel"
-        description="Natrous Travel Website built with SASS"
+        title="Natours Travel"
+        description={t("featured_project_3")}
+        techStack={["HTML", "Sass", "JavaScript"]}
         url="https://github.com/Richard-Hein/natours"
         demo="https://natours-pink-nine.vercel.app/"
       />
       <Project
-        image="/images/lara_pos.png"
-        title="Laravel Ecom Website"
-        description="Ecommerce Website Building With Laravel + Blade"
-        url=" https://github.com/Richard-Hein/Laravel_POS"
-      />
-      <Project
-        image="/images/nasa.png"
-        title="Nasa Mission Explorer"
-        description="Finding Inheritiable Planets With Control Panel Building With React + Express"
-        url="https://github.com/Richard-Hein/NASA_ZTM"
+        image="/images/e-plant.png"
+        title="Welcome To Paradise Nursery"
+        description={t("featured_project_4")}
+        techStack={["React", "Redux", "CSS"]}
+        url="https://github.com/Richard-Hein/E-Plant"
+        demo="https://e-plant-three.vercel.app/"
       />
 
-     
-      
-      
+      <Project
+        image="/images/lara_pos.png"
+        title="Laravel Ecommerce Website"
+        description={t("featured_project_5")}
+        techStack={["Laravel", "PHP", "MySQL", "Blade"]}
+        url="https://github.com/Richard-Hein/Laravel_POS"
+      />
+
+      <Project
+        image="/images/nasa.png"
+        title="NASA Mission Explorer"
+        description={t("featured_project_6")}
+        techStack={["React", "Express", "Node.js"]}
+        url="https://github.com/Richard-Hein/NASA_ZTM"
+      />
     </section>
   );
 };
+
 export default MyProjects;

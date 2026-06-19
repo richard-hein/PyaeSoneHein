@@ -1,46 +1,61 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: dim --default;
+}
 
 @theme {
   --breakpoint-md: 30rem;
-  /* --breakpoint-2xl: 100rem;
-  --breakpoint-3xl: 120rem; */
 }
-@plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
-}
-/* 
 
-body {
-    padding: 0 2rem;
-    margin: 0;
-    box-sizing: border-box;
-} */
+@layer base {
+  html {
+    /* For Firefox: Uses the native Tailwind v4 CSS variable */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) transparent;
+  }
+
+  /* For Chrome, Safari, and Edge */
+  html::-webkit-scrollbar {
+    width: 6px; /* Thin profile vertical */
+    height: 6px; /* Thin profile horizontal */
+  }
+
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    /* Safe variable lookup that daisyUI updates on theme changes */
+    background-color: var(--color-primary); 
+    border-radius: 9999px;
+  }
+}
+
 
 html {
   scroll-behavior: smooth;
 }
- body {
-  
-  font-family: "Poppins", sans-serif;
- }
 
- section {
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+section {
   /* Adjust the 80px to match your header's height */
   scroll-margin-top: 80px; 
 }
 
-.hero {
+/* .hero {
   background-image: url("../public/images/hero-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
-.wave-img{
+.wave-img {
   padding-top: 5rem;
   position: absolute;
   z-index: -1;
   opacity: 50%;
   width: 100%;
-}
+} */

@@ -1,23 +1,28 @@
 // icons
 import { FaFacebook, FaLinkedin, FaGithub, FaTelegram } from "react-icons/fa";
 
+import { SiGmail } from "react-icons/si";
+// import { Github, Linkedin, Mail } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
+import MyProfileImage from "../../public/images/My_AVATAR.jpg";
 
 // Components
 import Icon from "../components/Icon";
 // motion
 import { motion } from "motion/react";
+import WordCycle from "../components/ui/WordCycle";
+import { useTranslate } from "../hooks/useTranslate";
 const Hero = () => {
+  const t = useTranslate();
   return (
-    <section className="hero  flex justify-items-center items-center  min-h-screen w-full px-[20px] md:px-[30px]  " >
-      
-      
-      <div className="max-w-[30rem] text-white">
-        <h6 className=" text-lg font-bold">
-          Hello,{" "}
-          <motion.div
+    <div className="grid grid-cols-1 md:grid-cols-[55%_1fr] gap-0 md:gap-12 items-center min-h-[75vh] px-2 md:px-4">
+      {/* Left */}
+      <div className="mt-6 md:mt-0">
+        <p className="text-primary font-semibold tracking-[0.3em] mb-3">
+          {t("intro")}
+          <motion.span
             className="inline-block text-2xl"
-            animate={{ y: [0, -10, 0] }} 
+            animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 1,
               repeat: Infinity,
@@ -26,106 +31,109 @@ const Hero = () => {
             }}
           >
             👋
-          </motion.div>
-        </h6>
-        <h4 className="text-[14px] md:text-lg mb-2 ">
-          My name is{" "}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 1,
-              ease: "easeIn",
-            }}
-            className="font-extrabold inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary   to-indigo-600"
-          >
-            Pyae Sone Hein
-          </motion.div>
-          , and I'm a
-        </h4>
-
-        <h1 className="text-[25px] md:text-4xl font-bold  ">
-          <Typewriter
-            words={["Full-Stack Developer"]}
-            loop
-            cursor
-            cursorStyle="|"
-            typeSpeed={70}
-            deleteSpeed={60}
-            delaySpeed={1000}
-          />
-        </h1>
-        <p className="py-6">
-          I specialize in engineering fast, responsive, and scalable web applications. My focus is on leveraging proven technologies to deliver everything from pixel-perfect user interfaces to robust backend architectures
+          </motion.span>
         </p>
 
-        <div className="space-x-2 md:space-x-4">
-          <a target="_blank" href="https://clhwgpfvszfxjhqtvypy.supabase.co/storage/v1/object/sign/image/PSH_CV_02.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9lZjRkNDkwNi1hM2E0LTQzMGMtODFlNC0yN2M0ZDlmYTBhMWUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZS9QU0hfQ1ZfMDIucGRmIiwiaWF0IjoxNzY2MDUzNjc4LCJleHAiOjE3OTc1ODk2Nzh9.MUwrCSuN9tMKRMxyzmgTaCdbMJwErRuYEpevr7oLegQ"
-            download="PSH_CV_02.pdf">
-             
-          <motion.button
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 1,
-              ease: "easeIn",
-            }}
-          
-            className="btn btn-primary hover:bg-gray-300"
-          >
-            Download CV
-          </motion.button>
+        <h1 className="text-5xl font-black mb-4 leading-tight">
+          Pyae Sone Hein
+        </h1>
+        {/* <WordCycle /> */}
+
+        <h2 className="text-2xl md:text-4xl font-bold mb-2  h-[60px] md:h-[80px]">
+          <span className="text-primary">
+            <Typewriter
+              words={[
+                "Next.js Developer",
+                "Full Stack Developer",
+                "JavaScript Developer",
+
+                "React Developer",
+                "Java Backend Developer",
+                "Spring Boot Developer",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
+          </span>
+        </h2>
+
+        <p className="text-base md:text-lg tracking-wide leading-8 text-gray-300 max-w-[600px] mb-8">
+          {t("hero_paragraph", {
+            tech: (chunks) => (
+              <span className="text-primary font-semibold"> {chunks}</span>
+            ),
+          })}
+        </p>
+        {/* <div className="flex flex-wrap gap-4">
+          <a href="#projects" className="btn btn-primary">
+            View Projects
           </a>
-          <a href="https://www.facebook.com/richard.hein.783827?mibextid=ZbWKwL"  target="_blank">
-            <Icon icon={<FaFacebook />}> </Icon>
-          </a>
-          <a href="https://github.com/Richard-Hein?tab=repositories"  target="_blank">
-            <Icon icon={<FaGithub />}> </Icon>
-          </a>
-          {/* <a href="https://www.linkedin.com/in/pyae-sone-hein-24069b255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-            <Icon icon={<FaLinkedin />}> </Icon>
 
-          </a> */}
-          <a href="https://t.me/richard_hein_24 " target="_blank">
-            <Icon icon={<FaTelegram  />}> </Icon>
-
+          <a href="/resume.pdf" className="btn btn-outline">
+            Download Resume
+          </a>
+        </div> */}
+        <div className="flex flex-wrap items-center gap-4 mt-8">
+          <a href="#projects" className="btn btn-primary">
+            {t("btn_view_pj")}
           </a>
 
+          <a href="/#" className="btn btn-outline cursor-not-allowed">
+            {t("btn_download")}
+          </a>
 
-
-            
-
+          <div className="flex items-center gap-5 ml-2 mt-4 md:mt-0">
+            <a target="_blank" href="https://github.com/richard-hein">
+              <FaGithub
+                className="text-3xl md:text-2xl hover:text-primary  hover:-translate-y-1
+      transition-all duration-300"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/pyae-sone-hein-0b88943a0/"
+            >
+              <FaLinkedin
+                className="text-3xl md:text-2xl hover:text-primary  hover:-translate-y-1
+      transition-all duration-300"
+              />
+            </a>
+            <a href="mailto:pyaesone.dev.web@gmail.com">
+              <SiGmail
+                className="text-3xl md:text-2xl hover:text-primary hover:-translate-y-1
+      transition-all duration-300"
+              />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-[65rem] absolute bottom-[80px] text-white">
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeIn",
-          }}
-          className="border-0 md:border-e border-primary pr-2 "
-        >
-          <span class="text-xs">🟡</span> Tech Enthusiast 
-        </motion.p>
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 1,
-            ease: "easeIn",
-          }}
-          className="px-0 md:px-2 "
-        >
-          <span class="text-xs">🟡</span>  Lifelong Learner
-        </motion.p>
-        {/* <p>Building Frontend Modern Website</p> */}
+      {/* Right */}
+      <div className="hidden md:flex justify-center">
+        <motion.img
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          src={MyProfileImage}
+          alt="Pyae Sone Hein"
+          className="
+        w-[280px]
+        h-[340px]
+        md:w-[350px]
+        md:h-[420px]
+        object-cover
+        rounded-3xl
+        border-4
+        border-primary
+        shadow-[0_0_40px_rgba(132,204,22,0.3)]
+      "
+        />
       </div>
-      {/* burger menu */}
-      {/* <BurgerMenu /> */}
-    </section>
+    </div>
   );
 };
 export default Hero;

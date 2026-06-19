@@ -1,78 +1,65 @@
-const myEducationData = [
+export const contributedWebsites = [
   {
-    title: "Bachelor Art Of English",
-    subtitle: "Taunggoke University, Rakhine State",
-    date: "2019 - 2024",
-    description: "Studied English Literature and Art and Poems",
+    name: "Vetail | The Leading Omnichannel Commerce in Myanmar",
+    image: "./images/vetail_buyer.png",
+    description: "contributed_website_1",
+    techStacks: [
+      "Module Federation",
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Zustand",
+    ],
   },
   {
-    title: "Pre-Intermediate",
-    subtitle: "English",
-    date: "2019 - present",
-    description: "Self-Study Learning",
-  },
-  {
-    title: "N-2 ",
-    subtitle: "Japanese Language",
-    date: "2022 - present",
-    description: "Aim to be fluent and proficiency",
+    name: "Connect Yoga",
+    image: "./images/connect.png",
+    description: "contributed_website_2",
+    techStacks: ["Next.js", "TypeScript", "Zustand"],
   },
 ];
 
-const myDeveloperData = [
-  // {
-  //   title: "Myanmar Web Developer Series",
-  //   subtitle: "Msquare Programming Youtube Channel",
-  //   date: "2021-2021",
-  //   description: "Starting Learing The Fundamenals Of Web Development",
-  // },
+export const certifications = [
   {
-    title: "A-Z Web Developer Bootcamp",
-    subtitle: "CodeLab",
-    date: "2021-2022",
-    description: "I spend a lot of time at this by learning from HTML To PHP, Laravel And VueJs",
+    title: "Advanced React",
+    link: "https://coursera.org/share/8f3e7446bc68f7e055a4cd3b72ad0493",
+    platform: "Coursera",
+    techStack: ["React", "JavaScript", "Virtual Dom"],
   },
   {
-    title: "CodeLab OJT PHP/Laravel Program",
-    subtitle: "CodeLab",
-    date: "2022-2023",
-    description: "After AZ Web Developer Bootcamp, I've got a chance to join OJT program to gain real-world experience using PHP/Laravel and VueJs",
+    title: "IBM Java Developer - Professional Certificate",
+    link: "https://coursera.org/share/14714c5d9c350e208d67052b02bfa149",
+    platform: "Coursera",
+    techStack: [
+      "Software Engineering",
+      "Java",
+      "OOP",
+      "Git",
+      "SpringEcosystem",
+      "Cloud",
+      "GenAi",
+    ],
   },
-  {
-    title: "MERNStack|IBM Programm Courses|Others.....",
-    subtitle: "Coursera,Udemy,YouTube,",
-    date: "2022-present",
-    description: "I've built hands-on skills by working through tutorials on platforms like [e.g.Coursera, Udemy, YouTube] ",
-  },
-  
-]
 
-const myProjectData = [
   {
-    title :"ProAV Shop",
-    image : "/images/foodpanda.png",
-    description: "somjkdjeirjeirjkefjdkfjdsfdsjfeiruiejfkefjeirjekrjekrjeireijkerjkljgiouteajghe",
-    techs: ["react", "node", "mango", "express"]
-    
+    title: "Developing Frontend Apps with React",
+    link: "https://coursera.org/share/6ddc690f23cb1dd81328c7ecacb5c819",
+    platform: "Coursera",
+    techStack: ["HTML", "CSS", "Javascript", "React"],
   },
-   {
-    title :"ProAV Shop",
-    image : "/images/foodpanda.png",
-    description: "somjkdjeirjeirjkefjdkfjdsfdsjfeiruiejfkefjeirjekrjekrjeireijkerjkljgiouteajghe",
-    techs: ["react", "node", "mango", "express"]
+  {
+    title: "FullStack Web Development BootCamp",
+    link: "https://drive.google.com/drive/u/0/folders/1xnKVt8e29GYFyFzplFtYraAeBBFke6n9",
+    platform: "CodLab",
+    techStack: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Php",
+      "Laravel",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+    ],
   },
-   {
-    title :"ProAV Shop",
-    image : "/images/foodpanda.png",
-    description: "somjkdjeirjeirjkefjdkfjdsfdsjfeiruiejfkefjeirjekrjekrjeireijkerjkljgiouteajghe",
-    techs: ["react", "node", "mango", "express"]
-  },
-   {
-    title :"ProAV Shop",
-    image : "/images/foodpanda.png",
-    description: "somjkdjeirjeirjkefjdkfjdsfdsjfeiruiejfkefjeirjekrjekrjeireijkerjkljgiouteajghe",
-    techs: ["react", "node", "mango", "express"]
-  },
-]
-
-export  {myEducationData, myDeveloperData, myProjectData};
+];
