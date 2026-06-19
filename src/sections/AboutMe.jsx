@@ -64,7 +64,7 @@ const AboutMe = () => {
           </blockquote>
         </div>
       </div>
-      <div className="mt-12" id="skills">
+      <section className="mt-12" id="skills">
         <h2 className="text-3xl font-bold text-center mb-10">
           <span className="border-b-4 border-primary pb-2">
             {t("section_tech_stack")}
@@ -129,7 +129,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/* <div className="flex">
         <div className="mr-4">
           <h3 className="text-lg font-bold text-primary">Languages</h3>
