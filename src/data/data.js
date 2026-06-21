@@ -1,7 +1,8 @@
 export const contributedWebsites = [
   {
-    name: "Vetail | The Leading Omnichannel Commerce in Myanmar",
-    image: "./images/vetail_buyer.png",
+    // name: "Vetail | The Leading Omnichannel Commerce in Myanmar",
+    name: "Ecom & ERP Website ",
+    image: "/maintenance.png",
     description: "contributed_website_1",
     techStacks: [
       "Module Federation",
@@ -9,13 +10,14 @@ export const contributedWebsites = [
       "TypeScript",
       "Redux",
       "Zustand",
+      "React Query",
     ],
   },
   {
-    name: "Connect Yoga",
-    image: "./images/connect.png",
+    name: "Yoga | Video Based Subscription Website",
+    image: "/maintenance.png",
     description: "contributed_website_2",
-    techStacks: ["Next.js", "TypeScript", "Zustand"],
+    techStacks: ["Next.js", "TypeScript", "Zustand", "React Query", "Zod"],
   },
 ];
 

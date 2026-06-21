@@ -64,8 +64,12 @@ const MyJourney = () => {
               cursor-pointer
             "
                   >
-                    <div className="h-[180px] bg-base-300 flex items-center justify-center">
-                      <img src={web.image} alt={web.name} />
+                    <div className="h-[220px] bg-base-300 flex items-center justify-center">
+                      <img
+                        src={web.image}
+                        alt={web.name}
+                        className="object-fit w-full h-full"
+                      />
                     </div>
 
                     <div className="p-5">
